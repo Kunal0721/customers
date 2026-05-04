@@ -29,6 +29,11 @@ public class CustomerController {
 	public List<Customers> getAll() {
 		return service.getAll();
 	}
+	
+	@GetMapping("/test")
+	public String testAPi() {
+		return "test api";
+	}
 
 	@GetMapping("/{id}")
 	public Customers getOne(@PathVariable Long id) {
